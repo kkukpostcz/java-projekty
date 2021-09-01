@@ -2,6 +2,6 @@
 # řádky, které začínají # jsou komentáře
 
 # Pro IntelliJ IDEA:
-*.iml
-out/*
-.idea/*
+**/out/*
+**/.idea/*
+**/*.iml

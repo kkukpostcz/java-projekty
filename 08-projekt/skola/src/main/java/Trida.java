@@ -1,6 +1,9 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+
+
+
 public class Trida {
     String nameTridy;    // Jméno třídy
     String rocnik;    // Ročník
@@ -61,12 +64,21 @@ public class Trida {
         return null;
     }
 
+    public ArrayList<Student> getSeznamStudentu02() {
+        for (Student student : seznamStudentu) {
+            System.out.println(student.getCisloStudenta() + ", " + student.getNameStudent() + " " + student.getPrijmeniStudenta());
+        }
+        return null;
+    }
+
     public String getDescriptionTrida01() {
         return ("####################################" + "\n" + "Třída: " + nameTridy + " (ročník: " + getRocnik() + ") "
-                + "\n" + "Třídní učitel: ");
+                + "\n" + "Třídní učitel: " + prijmeniUcitel.getPrijmeniUcitele() + ", " + prijmeniUcitel.getNameUcitel() +
+                "\nPočet studentů: "+ seznamStudentu.size() + "\n" + "\n" + "####################################"+ "\n" +
+                getSeznamStudentu02() );
     }
     public String getDescriptionTrida02(Trida trida) {
         return ("####################################" + "\n" + nameTridy + ", " + prijmeniUcitel.getNameUcitel() + " "
-                + prijmeniUcitel.getPrijmeniUcitele()) + "\n" + trida.getSeznamStudentu();
+                + prijmeniUcitel.getPrijmeniUcitele()) + "\n" + trida.getSeznamStudentu02();
     }
 }
